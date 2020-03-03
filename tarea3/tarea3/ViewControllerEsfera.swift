@@ -24,6 +24,13 @@ class ViewControllerEsfera: UIViewController {
             return true;
         }
         else {
+            let alerta =
+                UIAlertController(title: "Error", message: "Por favor ingrese un valor numérico.", preferredStyle: .alert)
+            
+            alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            
+            present(alerta, animated: true, completion: nil)
+            
             return false;
         }
     }
