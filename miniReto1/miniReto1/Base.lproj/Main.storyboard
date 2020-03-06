@@ -76,34 +76,97 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ce7-QY-HHd">
                                 <rect key="frame" x="30" y="210" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l63-Jp-88W">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="addTries:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UU7-zv-fkh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1M-oi-QoV">
                                 <rect key="frame" x="110" y="210" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEf-Zt-iBg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="addTries:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUR-ui-aJn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaQ-lk-eQQ">
                                 <rect key="frame" x="190" y="210" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prK-FZ-i7d">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="addTries:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uuc-3L-4Zf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MG9-a4-fJ9">
                                 <rect key="frame" x="270" y="210" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-Ca-ZVA">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="addTries:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCO-eG-ySf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Yp-zk-bKf">
+                                <rect key="frame" x="270" y="574" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyF-YD-d8e">
+                                <rect key="frame" x="190" y="574" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sz7-xZ-01G">
+                                <rect key="frame" x="110" y="574" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bTry" destination="JMu-6C-IAa" id="1Wp-9z-PF0"/>
+                        <outlet property="bUserButton1" destination="l63-Jp-88W" id="3gb-aw-8on"/>
+                        <outlet property="bUserButton2" destination="xEf-Zt-iBg" id="zV1-vn-eqP"/>
+                        <outlet property="bUserButton3" destination="prK-FZ-i7d" id="RG0-la-GqV"/>
+                        <outlet property="bUserButton4" destination="wtJ-Ca-ZVA" id="N3J-Oc-F5V"/>
                         <outlet property="sControl" destination="hUv-rf-UOt" id="fpc-oV-aw0"/>
                         <outlet property="vAnswer1" destination="VK4-hw-H1b" id="hYv-QF-bJ2"/>
                         <outlet property="vAnswer2" destination="50U-ks-fxu" id="p0r-9a-6tc"/>
                         <outlet property="vAnswer3" destination="em6-Jn-Mni" id="sqg-ZT-gAe"/>
                         <outlet property="vAnswer4" destination="Dd4-1k-7Y0" id="lTI-tq-Sov"/>
                         <outlet property="vContainer" destination="8if-Wg-qwI" id="9Or-8I-csa"/>
+                        <outlet property="vTry1" destination="3Yp-zk-bKf" id="7rj-Hh-F55"/>
+                        <outlet property="vTry2" destination="fyF-YD-d8e" id="kMU-7d-1Rv"/>
+                        <outlet property="vTry3" destination="Sz7-xZ-01G" id="RwS-pu-P3K"/>
+                        <outlet property="vUserAnswer1" destination="Ce7-QY-HHd" id="Qrj-hZ-s4Q"/>
+                        <outlet property="vUserAnswer2" destination="P1M-oi-QoV" id="WEI-M5-zAt"/>
+                        <outlet property="vUserAnswer3" destination="eaQ-lk-eQQ" id="uug-Sk-hZR"/>
+                        <outlet property="vUserAnswer4" destination="MG9-a4-fJ9" id="eq0-WB-GTV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
