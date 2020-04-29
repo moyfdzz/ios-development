@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="136" id="Sz4-Ru-r3x">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="136" id="Sz4-Ru-r3x" customClass="CustomTableViewCell" customModule="Tarea5" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sz4-Ru-r3x" id="Dad-vW-9Yu" customClass="CustomTableViewCell" customModule="Tarea5" customModuleProvider="target">
@@ -27,21 +27,21 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyR-aa-EjQ">
-                                            <rect key="frame" x="148" y="58" width="42" height="21"/>
+                                            <rect key="frame" x="148" y="58" width="203" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gek-uB-KXX">
-                                            <rect key="frame" x="148" y="104" width="42" height="21"/>
+                                            <rect key="frame" x="148" y="104" width="203" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qz-7o-hcI">
-                                            <rect key="frame" x="148" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="148" y="11" width="203" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -55,6 +55,12 @@
                                         <outlet property="lbSueldo" destination="jyR-aa-EjQ" id="KPM-ua-X9J"/>
                                     </connections>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgFoto" destination="Oof-Dr-SU3" id="cDj-bW-yGV"/>
+                                    <outlet property="lbDepartamento" destination="Gek-uB-KXX" id="nKb-wv-aR3"/>
+                                    <outlet property="lbNombre" destination="7qz-7o-hcI" id="3b6-Kw-FXr"/>
+                                    <outlet property="lbSueldo" destination="jyR-aa-EjQ" id="WFC-jz-oEw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
