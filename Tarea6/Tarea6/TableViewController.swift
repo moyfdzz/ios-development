@@ -8,41 +8,61 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, protocoloAdministrarArticulos {
+    
+    func agregaArticulo(articulo: Articulo) {
+        listaArticulos.append(articulo)
+        tableView.reloadData()
+    }
+    
+    func modificaArticulo(articulo: Articulo) {
+        tableView.reloadData()
+    }
     
     var listaArticulos: [Articulo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Artículos"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let app = UIApplication.shared
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(guardarArticulos), name: UIApplication.didEnterBackgroundNotification, object: app)
+        
+        if FileManager.default.fileExists(atPath: dataFileURL().path) {
+            obtenerArticulos()
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return listaArticulos.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-
+        let articulo = listaArticulos[indexPath.row]
+        cell.textLabel?.text = articulo.id
+        cell.detailTextLabel?.text = articulo.descripcion
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -79,14 +99,50 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let vistaArticulo = segue.destination as! ViewController
+        
+        vistaArticulo.delegado = self
+        
+        if segue.identifier == "muestra" {
+            vistaArticulo.agregarArticulo = false
+            vistaArticulo.articulo = listaArticulos[tableView.indexPathForSelectedRow!.row]
+        } else {
+            vistaArticulo.agregarArticulo = true
+        }
     }
-    */
-
+    
+    func dataFileURL() -> URL {
+        let url = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+        let pathArchivo = url.appendingPathComponent("Articulos.plist")
+        return pathArchivo
+    }
+    
+    @IBAction func guardarArticulos() {
+        do {
+            let data = try PropertyListEncoder().encode(listaArticulos)
+            try data.write(to: dataFileURL())
+        }
+        catch {
+            print("Error al guardar los datos")
+        }
+    }
+    
+    func obtenerArticulos() {
+        listaArticulos.removeAll()
+        
+        do {
+            let data = try Data.init(contentsOf: dataFileURL())
+            listaArticulos = try PropertyListDecoder().decode([Articulo].self, from: data)
+        }
+        catch {
+            print("Error al cargar los datos del archivo")
+        }
+        
+        tableView.reloadData()
+    }
 }

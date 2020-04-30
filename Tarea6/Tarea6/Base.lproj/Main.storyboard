@@ -52,13 +52,16 @@
                                 <rect key="frame" x="111" y="490" width="119" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iza-1y-anp">
                                 <rect key="frame" x="279" y="566" width="88" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eD8-Jw-SkW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95875987034410137" blue="0.76659381120777503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="1124.6376811594205" y="166.74107142857142"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Title-->
         <scene sceneID="VQK-7x-g1l">
             <objects>
                 <tableViewController id="pNC-SO-IDo" customClass="TableViewController" customModule="Tarea6" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,15 +87,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lrl-pS-6CD">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="rsj-A3-FVJ" detailTextLabel="HV4-SS-cuw" style="IBUITableViewCellStyleSubtitle" id="Lrl-pS-6CD">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lrl-pS-6CD" id="U5I-4o-mB8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rsj-A3-FVJ">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HV4-SS-cuw">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="OJN-oM-PpX"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="muestra" id="OJN-oM-PpX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,10 +120,10 @@
                             <outlet property="delegate" destination="pNC-SO-IDo" id="Mm2-IH-a4r"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="caE-X8-HUD">
+                    <navigationItem key="navigationItem" title="Title" id="caE-X8-HUD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="otS-fW-dxk">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Lvp-HT-572"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="agrega" id="Lvp-HT-572"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -131,6 +150,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OJN-oM-PpX"/>
+        <segue reference="Lvp-HT-572"/>
     </inferredMetricsTieBreakers>
 </document>
